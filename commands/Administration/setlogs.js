@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const db = require("quick.db");
 const dateFormat = require("dateformat");
-const color = JSON.parse(fs.readFileSync(`Storage/color.json`, `utf8`));
 
 exports.run = async (bot, message, args, functions) => {
 
@@ -14,7 +13,7 @@ if(!channelFetched || channelFetched.type !== "text") return functions.errorEmbe
 
 let embed = new Discord.MessageEmbed()
 .setAuthor(`✅ | Log Set Shod`)
-.setColor(color.none)
+.setColor(`RANDOM`)
 .setTimestamp()
 .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
 .addField(`Channel Set Shode : `, channelFetched, true)
