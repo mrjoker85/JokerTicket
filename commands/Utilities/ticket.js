@@ -7,7 +7,7 @@ if(message && message.deletable) message.delete().catch(e => {});
 
 let embed = new Discord.MessageEmbed()
 .setTitle(`Ticket System`)
-.setColor(color.none)
+.setColor("RANDOM")
 .setDescription(`Baraye Sakhte Ticket Roye 🎟️ Bezanid`);
 message.channel.send(embed).then(m => {
   m.react('🎟️');
