@@ -35,4 +35,4 @@ const load = async () => {
 }
 
 load();
-bot.login(config.token);
+bot.login(process.env.TOKEN);
