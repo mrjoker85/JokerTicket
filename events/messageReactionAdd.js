@@ -3,7 +3,6 @@ const functions = require("../functions/functions.js");
 const dateFormat = require('dateformat');
 const db = require('quick.db');
 const fs = require('fs');
-const color = JSON.parse(fs.readFileSync(`Storage/color.json`, `utf8`));
 
 module.exports = async (bot, reaction, user) => {
   if(reaction.message.partial) await reaction.message.fetch();
@@ -16,13 +15,13 @@ module.exports = async (bot, reaction, user) => {
   let logsChannel = message.guild.channels.cache.find(c => c.id === db.get(`logs_${message.guild.id}`));
 
   let already = new Discord.MessageEmbed()
-  .setColor(color.red)
+  .setColor(`RED`)
   .setAuthor(`⛔ | Error`)
   .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
   .setDescription(`Shoma Faghat Mitavanid Yek Ticket Baz Konid`);
 
   let success = new Discord.MessageEmbed()
-  .setColor(color.green)
+  .setColor(`GREEN`)
   .setTitle(`🎟️ | Ticket Sakhte Shod`)
   .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
   .setDescription(`Ticket Shoma Sakhte Shod . Lotfan Motazere Staff Bashid Ta Be Ticket Shoma Pasokh Bedahand`);
@@ -69,7 +68,7 @@ module.exports = async (bot, reaction, user) => {
         let createdEmbed = new Discord.MessageEmbed()
         .setAuthor(`📝 | Yek Ticket Sakhte Shod`)
         .setTimestamp()
-        .setColor(color.none)
+        .setColor(`GREEN`)
         .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
         .setDescription(`Yek Fard Ticket Baz Kard Va Motazere Pasokhgoii Staff Hast`)
         .addField(`Etelat`, `**Tavasote :** \`${user.tag}\`\n**ID :** \`${user.id}\`\n**Ticket :** ${channel}\n**Dar Tarikhe :** \`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\``);
