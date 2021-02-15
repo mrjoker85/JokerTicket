@@ -13,7 +13,7 @@ exports.run = async (bot, message, args, functions) => {
     
       let userEmbed = new Discord.MessageEmbed()
       .setAuthor(`🗑️ | Ticket Delete Shod`)
-      .setColor(color.none)
+      .setColor(`BLACK`)
       .setDescription(`User Ticket Khod Ra Baraye Delete Shodan Taiid Kard Va Delete Shod`)
       .setTimestamp()
       .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
@@ -32,7 +32,7 @@ exports.run = async (bot, message, args, functions) => {
     
         let forceEmbed = new Discord.MessageEmbed()
         .setAuthor(`🗑️ | Ticket Delete Shod`)
-        .setColor(color.none)
+      .setColor(`BLACK`)
         .setDescription(`Yek Shakhs Ba Role ${support} Ticket Ra Bast Va Delete Kard`)
         .setTimestamp()
         .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
@@ -40,7 +40,7 @@ exports.run = async (bot, message, args, functions) => {
     
         let embed1 = new Discord.MessageEmbed()
         .setAuthor(`📥 | Ticket Delete Shod`)
-        .setColor(color.blue)
+        .setColor(`BLUE`)
         .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
         .setDescription(`\`${message.author.tag}\` Ticket Khod Ra Bast`);
         db.delete(`ticket.${message.channel.name}`);
@@ -53,7 +53,7 @@ exports.run = async (bot, message, args, functions) => {
     
         let staffEmbed = new Discord.MessageEmbed()
       .setAuthor(`🗑️| Dar Khast Delete Shodan Ticket`)
-      .setColor(color.none)
+      .setColor(`BLACK`)
       .setDescription(`Yek User Ba Role ${support} Darkhast Bastn Va Delete Krdan Ticket Kard`)
       .setTimestamp()
       .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
@@ -61,7 +61,7 @@ exports.run = async (bot, message, args, functions) => {
     
         if(!message.guild.member(message.author).roles.cache.has(support.id)) return functions.errorEmbed(message, message.channel, "Shoma Role `Ticket Support` Ra Nadarid.");
         let embed2 = new Discord.MessageEmbed()
-        .setColor(color.green)
+        .setColor(`GREEN`)
         .setTitle(`🎟️ | Ticket Kamel Shod`)
         .setDescription(`baraye Bastane Ticket Az \\🗑️ Estefade Konid Va Dar Gheyre In Sorat Hich Vakoneshi Anjam Nadid.`);
         if(logsChannel) await logsChannel.send(staffEmbed);
