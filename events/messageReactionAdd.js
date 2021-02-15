@@ -96,7 +96,7 @@ module.exports = async (bot, reaction, user) => {
 
         let deletedEmbed = new Discord.MessageEmbed()
         .setAuthor(`🗑️ | Ticket Kamel Shod`)
-        .setColor(color.none)
+        .setColor(`BLACK`)
         .setDescription(`User Ticket Khod Ra Baraye Delete Shodan Taiid Kard Va Delete Shod`)
         .setTimestamp()
         .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
