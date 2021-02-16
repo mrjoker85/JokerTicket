@@ -15,7 +15,6 @@ let embed = new Discord.MessageEmbed()
 .setAuthor(`✅ | Log Set Shod`)
 .setColor(`RANDOM`)
 .setTimestamp()
-.setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
 .addField(`Channel Set Shode : `, channelFetched, true)
 .addField(`Tavasote : `, message.author, true)
 .addField(`Dar Tarikhe : `, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\``, true);
