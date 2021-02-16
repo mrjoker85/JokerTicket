@@ -17,13 +17,11 @@ module.exports = async (bot, reaction, user) => {
   let already = new Discord.MessageEmbed()
   .setColor(`RED`)
   .setAuthor(`⛔ | Error`)
-  .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
   .setDescription(`Shoma Faghat Mitavanid Yek Ticket Baz Konid`);
 
   let success = new Discord.MessageEmbed()
   .setColor(`GREEN`)
   .setTitle(`🎟️ | Ticket Sakhte Shod`)
-  .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
   .setDescription(`Ticket Shoma Sakhte Shod . Lotfan Motazere Staff Bashid Ta Be Ticket Shoma Pasokh Bedahand`);
 
   let split = '';
@@ -69,7 +67,6 @@ module.exports = async (bot, reaction, user) => {
         .setAuthor(`📝 | Yek Ticket Sakhte Shod`)
         .setTimestamp()
         .setColor(`GREEN`)
-        .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
         .setDescription(`Yek Fard Ticket Baz Kard Va Motazere Pasokhgoii Staff Hast`)
         .addField(`Etelat`, `**Tavasote :** \`${user.tag}\`\n**ID :** \`${user.id}\`\n**Ticket :** ${channel}\n**Dar Tarikhe :** \`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\``);
 
@@ -99,7 +96,6 @@ module.exports = async (bot, reaction, user) => {
         .setColor(`BLACK`)
         .setDescription(`User Ticket Khod Ra Baraye Delete Shodan Taiid Kard Va Delete Shod`)
         .setTimestamp()
-        .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
         .addField(`Etelat`, `**Tavasote :** \`${user.tag}\`\n**ID :** \`${user.id}\`\n**Ticket :** \`${message.channel.name}\`\n**Dar Tarikhe :** \`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\``);
 
         if(logsChannel) logsChannel.send(deletedEmbed);
