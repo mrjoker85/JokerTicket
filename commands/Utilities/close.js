@@ -16,7 +16,6 @@ exports.run = async (bot, message, args, functions) => {
       .setColor(`BLACK`)
       .setDescription(`User Ticket Khod Ra Baraye Delete Shodan Taiid Kard Va Delete Shod`)
       .setTimestamp()
-      .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
       .addField(`Etelat`, `**Tavasote :** \`${message.author.tag}\`\n**ID :** \`${message.author.id}\`\n**Ticket :** \`${message.channel.name}\`\n**Dar Tarikhe :** \`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\``);
     
       db.delete(`ticket.${message.channel.name}`);
@@ -35,13 +34,11 @@ exports.run = async (bot, message, args, functions) => {
       .setColor(`BLACK`)
         .setDescription(`Yek Shakhs Ba Role ${support} Ticket Ra Bast Va Delete Kard`)
         .setTimestamp()
-        .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
         .addField(`Etelat`, `**Tavasote :** \`${message.author.tag}\`\n**ID :** \`${message.author.id}\`\n**Ticket :** \`${message.channel.name}\`\n**Dar Tarikhe :** \`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\``);
     
         let embed1 = new Discord.MessageEmbed()
         .setAuthor(`📥 | Ticket Delete Shod`)
         .setColor(`BLUE`)
-        .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
         .setDescription(`\`${message.author.tag}\` Ticket Khod Ra Bast`);
         db.delete(`ticket.${message.channel.name}`);
         if(logsChannel) await logsChannel.send(forceEmbed);
@@ -56,7 +53,6 @@ exports.run = async (bot, message, args, functions) => {
       .setColor(`BLACK`)
       .setDescription(`Yek User Ba Role ${support} Darkhast Bastn Va Delete Krdan Ticket Kard`)
       .setTimestamp()
-      .setFooter("Coded By IccY#2265", `https://cdn.discordapp.com/attachments/626444990620499978/807146734069350400/iccy.gif`)
       .addField(`Etelat`, `**Utilisateur :** \`${message.author.tag}\`\n**ID :** \`${message.author.id}\`\n**Ticket :** \`${message.channel.name}\`\n**Dar Tarikhe :** \`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\``);
     
         if(!message.guild.member(message.author).roles.cache.has(support.id)) return functions.errorEmbed(message, message.channel, "Shoma Role `Ticket Support` Ra Nadarid.");
